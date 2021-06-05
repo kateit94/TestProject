@@ -1,0 +1,55 @@
+.site-header {
+  background-color: $white;
+  height: 80px;
+
+  .navbar {
+    padding-top: 19px;
+    padding-bottom: 19px;
+
+    li {
+      padding: 0 15px;
+    }
+    li:hover > a {
+      color: $dark-color;
+    }
+    .menu-item-has-children {
+      position: relative;
+      padding-right: 25px;
+
+      ul {
+        flex-direction: column;
+      }
+    }
+    .menu-item-has-children > a:after {
+      content: '';
+      display: inline-block;
+      border-right: 2px solid #77838f;
+      border-bottom: 2px solid #77838f;
+      width: 6px;
+      height: 6px;
+      transform: rotate(
+                      45deg
+      );
+      position: absolute;
+      right: 10px;
+      top: 20px;
+    }
+    a {
+      color: $secondary;
+      font-size: 16px;
+      padding: 10px 0;
+    }
+    .cta-primary {
+      a {
+        background-color: $primary;
+        color: $white;
+        padding: 10px;
+        border-radius: 4px;
+      }
+    }
+  }
+  .custom-logo {
+    width: 150px;
+  }
+
+}

@@ -1,0 +1,34 @@
+body {
+  font-family: $font-family-nunito;
+  font-size: 17px;
+  line-height: 27px;
+  color: $secondary;
+}
+h1 {
+  font-size: 38px;
+  line-height: 48px;
+  letter-spacing: 1.42px;
+  font-weight: 400;
+  color: $dark-color;
+}
+h2 {
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: 1.2px;
+  font-weight: 400;
+  color: $dark-color;
+}
+h3 {
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.68px;
+  font-weight: 400;
+  color: $dark-color;
+}
+h4 {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.69px;
+  font-weight: 400;
+  color: $dark-color;
+}
