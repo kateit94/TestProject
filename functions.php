@@ -200,6 +200,28 @@ function hotel_property_widgets_init() {
             'after_title'   => '</h4>',
         )
     );
+    register_sidebar(
+        array(
+            'name'          => esc_html__( 'Property Single Sidebar', 'hotel-property' ),
+            'id'            => 'property-single-sidebar-widget',
+            'description'   => esc_html__( 'Add widgets here.', 'hotel-property' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="widget-title">',
+            'after_title'   => '</h4>',
+        )
+    );
+    register_sidebar(
+        array(
+            'name'          => esc_html__( 'Property Single Bottom', 'hotel-property' ),
+            'id'            => 'property-single-bottom-widget',
+            'description'   => esc_html__( 'Add widgets here.', 'hotel-property' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="widget-title">',
+            'after_title'   => '</h4>',
+        )
+    );
 
 }
 add_action( 'widgets_init', 'hotel_property_widgets_init' );
@@ -247,6 +269,14 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+/**
+ * CPT functions.
+ */
+require get_template_directory() . '/inc/cpt-functions.php';
+/**
+ * Shortcodes functions.
+ */
+require get_template_directory() . '/inc/shortcodes-functions.php';
 
 /**
  * Load Jetpack compatibility file.
@@ -254,4 +284,5 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
 
