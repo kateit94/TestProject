@@ -3,8 +3,7 @@
   height: 80px;
 
   .navbar {
-    padding-top: 19px;
-    padding-bottom: 19px;
+    height: 80px;
 
     li {
       padding: 0 15px;
@@ -18,6 +17,7 @@
 
       ul {
         flex-direction: column;
+        background-color: $white;
       }
     }
     .menu-item-has-children > a:after {

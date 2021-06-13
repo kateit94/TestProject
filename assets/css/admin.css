@@ -1,0 +1,29 @@
+ul.property_gallery_mtb.ui-sortable {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.ui-draggable-handle, .ui-sortable-handle {
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.ui-sortable-handle span {
+    width: 100px;
+    height: 100px;
+    display: block;
+    background-size: cover !important;
+}
+.ui-sortable-handle a {
+    position: absolute;background: #fff;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}

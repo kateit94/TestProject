@@ -1,4 +1,52 @@
 .single-properties {
+  .property__gallery {
+    .property__gallery-full {
+      max-height: 30vw;
+      min-height: 30vw;
+      height: 100%;
+    }
+    .property__gallery-left {
+      max-height: 30vw;
+      min-height: 30vw;
+    }
+    .property-main-image {
+      position: absolute;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+    .property__gallery-right {
+      max-height: 30vw;
+
+      .flex-container {
+        height: 100%;
+        .flex-item {
+          height: 50%;
+
+          .property-gallery-image {
+            position: absolute;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    img {
+      max-height: 100%;
+    }
+    .property__gallery-view-all {
+      bottom: 30px;
+      right: 30px;
+
+      .property__gallery-main-cta {
+        color: $secondary;
+        background-color: $white;
+        padding: 15px 25px;
+        outline: none;
+      }
+    }
+  }
   .property {
     padding-top: 50px;
     padding-bottom: 50px;

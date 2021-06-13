@@ -28,7 +28,7 @@ function hotel_property_cpt_properties() {
         'description'         => __( 'Properties', 'hotel-property' ),
         'labels'              => $labels,
         // Features this CPT supports in Post Editor
-        'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields' ),
+        'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields', 'hotel_property_feat_img_slider' ),
         // You can associate this CPT with a taxonomy or custom taxonomy.
         'taxonomies'          => array( 'city', 'amenity', 'extras', 'accessibility', 'bedroom_features', 'property_type' ),
         /* A hierarchical CPT is like Pages and can have

@@ -238,17 +238,43 @@ function hotel_property_scripts() {
 
     wp_enqueue_style( 'hotel-property-min-style', get_stylesheet_directory_uri() . '/assets/css/theme.min.css', false, '1.0', 'all' );
 
-	wp_enqueue_script( 'hotel-property-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+    //Fancybox 3 CSS
+    wp_enqueue_style( 'fancybox-style','https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css' );
 
     //Bootstrap JS
     wp_enqueue_script( 'bootstrap-js', get_stylesheet_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array('jquery'), '1', true );
+    //Fancybox 3 JS
+    wp_enqueue_script ('fancybox-script', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', array(), '3.5.7', true);
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+	wp_enqueue_script( 'hotel-property-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'hotel-property-theme-js', get_template_directory_uri() . '/assets/js/theme.js', array('jquery'), _S_VERSION, true );
+
+
+
+
+
+
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 }
 add_action( 'wp_enqueue_scripts', 'hotel_property_scripts' );
+
+add_action( 'admin_enqueue_scripts', 'hotel_property_scripts_for_gallery' );
+function hotel_property_scripts_for_gallery(){
+    wp_enqueue_script('jquery-ui-core');
+    wp_enqueue_script('jquery-ui-widget');
+    wp_enqueue_script('jquery-ui-sortable');
+
+    if ( ! did_action( 'wp_enqueue_media' ) )
+        wp_enqueue_media();
+
+    wp_enqueue_script('admin_scripts',get_stylesheet_directory_uri() . '/assets/js/custom-gallery.js', array('jquery','jquery-ui-sortable') );
+    wp_enqueue_style('admin_styles',get_stylesheet_directory_uri() . '/assets/css/admin.css', array(), 1 );
+}
+
+
 
 /**
  * Implement the Custom Header feature.
@@ -277,6 +303,10 @@ require get_template_directory() . '/inc/cpt-functions.php';
  * Shortcodes functions.
  */
 require get_template_directory() . '/inc/shortcodes-functions.php';
+/**
+ * Custom gallery functions.
+ */
+require get_template_directory() . '/inc/custom-gallery.php';
 
 /**
  * Load Jetpack compatibility file.

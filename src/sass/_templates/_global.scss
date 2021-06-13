@@ -32,3 +32,16 @@ h4 {
   font-weight: 400;
   color: $dark-color;
 }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.flex-item {
+  flex: 1 1 100%; // 1 across at mobile
+
+  @media (min-width: 1024px) {
+    flex: 1 1 calc((100% / 2) - 2rem);
+  }
+}

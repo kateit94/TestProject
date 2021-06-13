@@ -26,7 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'hotel-property' ); ?></a>
 
 	<header id="masthead" class="site-header sticky-top">
-		<nav id="site-navigation" class="main-navigation navbar">
+		<nav id="site-navigation" class="main-navigation navbar p-0">
             <div class="container">
                 <div class="site-branding">
                     <?php
