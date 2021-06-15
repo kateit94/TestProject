@@ -274,6 +274,15 @@ function hotel_property_scripts_for_gallery(){
     wp_enqueue_style('admin_styles',get_stylesheet_directory_uri() . '/assets/css/admin.css', array(), 1 );
 }
 
+//* Enqueue Scripts and Styles for ACF
+add_action( 'acf/input/admin_enqueue_scripts', 'my_acf_admin_enqueue_scripts' );
+function my_acf_admin_enqueue_scripts() {
+
+    // register script
+    wp_register_script( 'acf-input-js', get_stylesheet_directory_uri() . '/assets/js/acf-input.js', false, '1.0.0');
+    wp_enqueue_script( 'acf-input-js' );
+
+}
 
 
 /**

@@ -78,4 +78,95 @@
 
         </div>
     </div>
+
+    <!--    Hardcoded reviews based on the task -->
+    <div class="property__reviews-text-wrapper">
+        <div class="property__reviews-text-item d-flex flex-row flex-wrap">
+            <div class="property__reviews-text__photo">
+                <span class="rounded-circle d-block"></span>
+            </div>
+            <div class="property__reviews-text__text-wrapper flex-row">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column">
+                        <span class="property__reviews-text__name">Hans Down</span>
+                        <span class="property__reviews-text__date text-uppercase">09 APR 2018</span>
+                    </div>
+                    <div class="property__reviews-text__reply d-flex flex-wrap align-content-center">
+                        <span class="rounded"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
+  <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+</svg> Reply</span>
+                    </div>
+
+                </div>
+                <div class="property__reviews-text__body-text w-100">
+                    Praesent ut fringilla ligula. Vivamus et lacus nec risus malesuada vestibulum. Phasellus lobortis viverra lobortis. Donec iaculis, erat eu bibendum faucibus.
+                </div>
+            </div>
+
+
+        </div>
+        <div class="property__reviews-text-item d-flex flex-row flex-wrap">
+            <div class="property__reviews-text__photo">
+                <span class="rounded-circle d-block"></span>
+            </div>
+            <div class="property__reviews-text__text-wrapper flex-row">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column">
+                        <span class="property__reviews-text__name">Penny Tool</span>
+                        <span class="property__reviews-text__date text-uppercase">09 APR 2018</span>
+                    </div>
+                    <div class="property__reviews-text__reply d-flex flex-wrap align-content-center">
+                        <span class="rounded"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
+  <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+</svg> Reply</span>
+                    </div>
+                </div>
+                <div class="property__reviews-text__body-text w-100">
+                    Praesent ut fringilla ligula. Vivamus et lacus nec risus malesuada vestibulum. Phasellus lobortis viverra lobortis. Donec iaculis, erat eu bibendum faucibus.
+                </div>
+            </div>
+        </div>
+        <div class="property__reviews-text-item sub-item d-flex flex-row flex-wrap">
+            <div class="property__reviews-text__photo">
+                <span class="rounded-circle d-block"></span>
+            </div>
+            <div class="property__reviews-text__text-wrapper flex-row">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column">
+                        <span class="property__reviews-text__name">Eric Widget</span>
+                        <span class="property__reviews-text__date text-uppercase">09 APR 2018</span>
+                    </div>
+                    <div class="property__reviews-text__reply d-flex flex-wrap align-content-center">
+                        <span class="rounded"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
+  <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+</svg> Reply</span>
+                    </div>
+                </div>
+                <div class="property__reviews-text__body-text w-100">
+                    Praesent ut fringilla ligula. Vivamus et lacus nec risus malesuada vestibulum. Phasellus lobortis viverra lobortis.
+                </div>
+            </div>
+        </div>
+        <div class="property__reviews-text-item d-flex flex-row flex-wrap">
+            <div class="property__reviews-text__photo">
+                <span class="rounded-circle d-block"></span>
+            </div>
+            <div class="property__reviews-text__text-wrapper flex-row">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column">
+                        <span class="property__reviews-text__name">Penny Tool</span>
+                        <span class="property__reviews-text__date text-uppercase">09 APR 2018</span>
+                    </div>
+                    <div class="property__reviews-text__reply d-flex flex-wrap align-content-center">
+                        <span class="rounded"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
+  <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+</svg> Reply</span>
+                    </div>
+                </div>
+                <div class="property__reviews-text__body-text w-100">
+                    Praesent ut fringilla ligula. Vivamus et lacus nec risus malesuada vestibulum. Phasellus lobortis viverra lobortis. Donec iaculis, erat eu bibendum faucibus.
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

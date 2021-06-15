@@ -89,6 +89,9 @@
                 </div>
             <?php endif; ?>
         </div>
+        <div class="property__section-separator d-flex justify-content-center">
+
+        </div>
         <?php
         if ( is_active_sidebar( 'property-single-bottom-widget' ) ) : ?>
             <div class="row">

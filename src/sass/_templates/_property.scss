@@ -58,7 +58,12 @@
       .wp-block-separator {
         margin-bottom: 40px;
         margin-top: 40px;
-        border-width: 2px;
+        border-width: 0;
+        border-bottom-width: 1px;
+        border-color: $separator;
+        border-style: solid;
+        background-color: transparent !important;
+        opacity: 1;
       }
 
       ol {
@@ -95,7 +100,6 @@
     }
 
     .property__short-info {
-      padding-bottom: 40px;
       
       .property__location {
         color: $primary;
@@ -179,27 +183,155 @@
     }
 
     .property__reviews {
-      .d-flex {
-        margin-bottom: 10px;
-      }
-      .d-flex,
-      .property__reviews-name,
-      .property__reviews-value {
-        height: 26px;
-      }
-      .property__reviews-progress-bar {
-        min-width: 150px;
-        height: 5px;
-        background-color: $progress-bar-bg;
-        border-radius: 2.5px;
+      .property__reviews-wrapper {
+        padding: 25px;
+        box-shadow: 0 -30px 60px rgba(0, 0, 0, 0.03);
 
-        .progress-bar {
-          background-color: $primary;
+        .d-flex {
+          margin-bottom: 10px;
+        }
+        .d-flex,
+        .property__reviews-name,
+        .property__reviews-value {
+          height: 26px;
+        }
+        .property__reviews-progress-bar {
+          min-width: 150px;
+          height: 5px;
+          background-color: $progress-bar-bg;
           border-radius: 2.5px;
+
+          .progress-bar {
+            background-color: $primary;
+            border-radius: 2.5px;
+          }
+        }
+        .property__reviews-value {
+          width: 40px;
         }
       }
-      .property__reviews-value {
-        width: 40px;
+      .property__reviews-text-wrapper {
+        padding-top: 20px;
+
+        .property__reviews-text-item {
+          border-top: 1px $separator solid;
+          padding: 30px 0 20px;
+        }
+        .property__reviews-text-item:first-child {
+          border-top-width: 0;
+        }
+        .property__reviews-text-item.sub-item {
+          padding-left: 40px;
+          border-top-width: 0;
+        }
+        .property__reviews-text__photo {
+          margin-right: 25px;
+
+          span {
+            background-color: $progress-bar-bg;
+            width: 70px;
+            height: 70px;
+          }
+        }
+        .property__reviews-text__text-wrapper {
+          width: calc(100% - 95px);
+          .property__reviews-text__name {
+            font-size: 14px;
+            line-height: 26px;
+            color: $dark-color;
+          }
+          .property__reviews-text__date {
+            font-size: 14px;
+            line-height: 26px;
+          }
+          .property__reviews-text__reply {
+            span {
+              background-color: $reply-bg;
+              font-size: 14px;
+              line-height: 26px;
+              padding: 0 10px;
+              cursor: pointer;
+
+              svg {
+                padding-bottom: 2px;
+              }
+            }
+          }
+          .property__reviews-text__body-text {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+    .property__section-separator {
+      margin: 120px auto;
+      width: 100%;
+      max-width: 750px;
+      background-color: $separator;
+      height: 1px;
+    }
+  }
+  .property__single-sidebar {
+    .property__sidebar-price-and-info {
+      padding: 25px 10px;
+
+      .property__sidebar-price {
+        font-weight: 700;
+      }
+      span {
+        color: $dark-color;
+        font-size: 17px;
+        line-height: 27px;
+      }
+      .property__sidebar-rating {
+        span {
+          font-size: 14px;
+          line-height: 26px;
+        }
+      }
+    }
+    .acf-form {
+      padding: 20px 0;
+
+      .acf-required {
+        color: $dark-color;
+      }
+      .af-submit-button {
+        background-color: $primary;
+        color: $white;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 600;
+        padding: 15px 30px;
+        width: 100%;
+        border: none;
+        border-radius: 4px;
+      }
+      .af-label {
+        color: $dark-color;
+        font-size: 13px;
+        line-height: 26px;
+        text-transform: uppercase;
+      }
+      .acf-field {
+        border: none !important;
+        padding: 10px;
+      }
+      .acf-date-picker {
+        input {
+          height: 53px;
+        }
+      }
+      .af-field-guests {
+        select {
+          height: 53px;
+          border-radius: 4px;
+        }
+      }
+    }
+    .textwidget {
+      a {
+        color: $secondary;
       }
     }
   }
