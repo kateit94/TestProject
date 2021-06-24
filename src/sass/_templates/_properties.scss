@@ -1,284 +1,346 @@
-.properties__heading-form-section {
-  background-color: $lightgray;
-  padding: 35px 0;
+.post-type-archive-properties {
+  .properties__heading-form-section {
+    background-color: $lightgray;
+    padding: 35px 0;
 
-  .properties__heading-form {
-    .properties__search-form {
-      label {
-        color: $dark-color;
-        font-size: 13px;
-        line-height: 26px;
-        margin-bottom: 5px;
-      }
-      .form-input {
-        background-color: $white;
-        border-radius: 4px;
-        padding: 14px 17px;
-        color: $dark-color;
-        border: 1px $search-form-border solid;
-        outline: none;
-      }
-      ::placeholder {
-        color: $search-form-placeholder;
-      }
-    }
-  }
-}
-
-
-.properties__heading-section {
-  padding-top: 85px;
-  padding-bottom: 40px;
-}
-
-.properties__grid-list {
-  gap: 1rem;
-
-  .property__list-card {
-    padding: 25px;
-
-    .property__list-card-image {
-      max-height: 12vw;
-      height: 190px;
-
-      img {
-        position: absolute;
-        min-width: 100%;
-        min-height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover;
-      }
-      a:before {
-        content: '';
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.403901) 100%);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-      }
-    }
-    .property__list-card-price {
-      color: $white;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-    }
-    .property__list-card-wrapper {
-      padding: 5px 15px 5px 30px;
-
-      .property__short-info {
-        border-bottom: 1px $separator solid;
-        padding-bottom: 15px;
-
-        .property__location {
-          color: $primary;
-          font-size: 14px;
+    .properties__heading-form {
+      .properties__search-form {
+        label {
+          color: $dark-color;
+          font-size: 13px;
           line-height: 26px;
-          padding-left: 15px;
-          position: relative;
+          margin-bottom: 5px;
         }
-        .property__location:before {
-          content: '';
-          background-image: $location-icon;
-          width: 10px;
-          height: 25px;
-          background-size: contain;
-          position: absolute;
-          background-repeat: no-repeat;
-          background-position: center;
-          left: 0;
+        .form-input {
+          background-color: $white;
+          border-radius: 4px;
+          padding: 14px 17px;
+          color: $dark-color;
+          border: 1px $search-form-border solid;
+          outline: none;
+          height: 57px;
         }
-        .property__short-info-items {
-          span {
-            padding-left: 25px;
-            padding-right: 20px;
-            position: relative;
-            font-size: 14px;
-            line-height: 26px;
-            color: $dark-color;
-          }
-          span:before {
-            content: '';
-            width: 15px;
-            height: 25px;
-            background-size: contain;
-            position: absolute;
-            background-repeat: no-repeat;
-            background-position: center;
-            left: 0;
-          }
-          .property__bedrooms:before {
-            background-image: $bedroom-icon;
-          }
-          .property__bathrooms:before {
-            background-image: $bathroom-icon;
-          }
-          .property__capability:before {
-            background-image: $capability-icon;
-          }
-          .property__square:before {
-            background-image: $square-icon;
-          }
+        input[type="submit"] {
+          background-color: $primary;
+          color: $white;
+          font-size: 15px;
+          line-height: 20px;
+          height: 57px;
+          border-width: 0;
         }
-      }
-      .property__list-card-excerpt {
-        padding-top: 20px;
+        ::placeholder {
+          color: $search-form-placeholder;
+        }
       }
     }
   }
 
-  .property__grid-card {
-    max-width: calc(50% - 1rem);
+  .properties__heading-section {
+    padding-top: 85px;
+    padding-bottom: 40px;
+    border-bottom: 1px $separator solid;
+    margin-bottom: 40px;
 
-    .property__grid-card-image {
-      max-height: 20vw;
-      height: 280px;
-
-      img {
-        position: absolute;
-        min-width: 100%;
-        min-height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover;
-      }
-      a:before {
-        content: '';
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.403901) 100%);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-      }
-    }
-    .property__grid-card-price {
-      color: $white;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-    }
-    .property__grid-card-wrapper {
-      padding: 25px 40px 15px 40px;
-
-      .property__short-info {
-        border-bottom: 1px $separator solid;
-        padding-bottom: 15px;
-
-        .property__location {
-          color: $primary;
-          font-size: 14px;
-          line-height: 26px;
-          padding-left: 15px;
-          position: relative;
-        }
-        .property__location:before {
-          content: '';
-          background-image: $location-icon;
-          width: 10px;
-          height: 25px;
-          background-size: contain;
-          position: absolute;
-          background-repeat: no-repeat;
-          background-position: center;
-          left: 0;
-        }
-        .property__short-info-items {
-          span {
-            padding-left: 25px;
-            padding-right: 20px;
-            position: relative;
-            font-size: 14px;
-            line-height: 26px;
-            color: $dark-color;
-          }
-          span:before {
-            content: '';
-            width: 15px;
-            height: 25px;
-            background-size: contain;
-            position: absolute;
-            background-repeat: no-repeat;
-            background-position: center;
-            left: 0;
-          }
-          .property__bedrooms:before {
-            background-image: $bedroom-icon;
-          }
-          .property__bathrooms:before {
-            background-image: $bathroom-icon;
-          }
-          .property__capability:before {
-            background-image: $capability-icon;
-          }
-          .property__square:before {
-            background-image: $square-icon;
-          }
-        }
-      }
-      .property__grid-card-author {
-        border-bottom: 1px $separator solid;
-        padding: 15px 5px;
+    .properties__top-bar {
+      select {
+        color: $secondary;
+        background-color: $select-bg;
+        border-color: $select-bg;
         font-size: 14px;
-        line-height: 26px;
+        height: 32px;
+        padding: 0 10px;
+      }
+      span {
+        color: $secondary;
+        font-size: 14px;
+      }
+      .properties-grid-list-view {
+        a {
+          width: 32px;
+          background-color: $select-bg;
+            svg {
+              fill: $secondary;
+            }
+        }
+        a.active {
+          background-color: $primary;
+          svg {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .properties__grid-list {
+    gap: 1rem;
+
+    .property__list-card {
+      padding: 25px;
+
+      .property__list-card-image {
+        max-height: 12vw;
+        height: 190px;
 
         img {
-          margin-right: 15px;
-          border-radius: 50%;
+          position: absolute;
+          min-width: 100%;
+          min-height: 100%;
+          -o-object-fit: cover;
+          object-fit: cover;
         }
-        .property__grid-card-author-name {
-          color: $dark-color;
+        a:before {
+          content: '';
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.403901) 100%);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
         }
       }
+      .property__list-card-price {
+        color: $white;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+      }
+      .property__list-card-wrapper {
+        padding: 5px 15px 5px 30px;
 
-      .property__grid-card-cta {
-        padding: 15px 0 25px 0;
+        .property__short-info {
+          border-bottom: 1px $separator solid;
+          padding-bottom: 15px;
 
-        .property__details-cta-save {
-          color: $secondary;
-          svg {
-            margin-right: 5px;
-            margin-bottom: 3px;
+          .property__location {
+            color: $primary;
+            font-size: 14px;
+            line-height: 26px;
+            padding-left: 15px;
+            position: relative;
+          }
+          .property__location:before {
+            content: '';
+            background-image: $location-icon;
+            width: 10px;
+            height: 25px;
+            background-size: contain;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center;
+            left: 0;
+          }
+          .property__short-info-items {
+            span {
+              padding-left: 25px;
+              padding-right: 20px;
+              position: relative;
+              font-size: 14px;
+              line-height: 26px;
+              color: $dark-color;
+            }
+            span:before {
+              content: '';
+              width: 15px;
+              height: 25px;
+              background-size: contain;
+              position: absolute;
+              background-repeat: no-repeat;
+              background-position: center;
+              left: 0;
+            }
+            .property__bedrooms:before {
+              background-image: $bedroom-icon;
+            }
+            .property__bathrooms:before {
+              background-image: $bathroom-icon;
+            }
+            .property__capability:before {
+              background-image: $capability-icon;
+            }
+            .property__square:before {
+              background-image: $square-icon;
+            }
           }
         }
-        .property__details-cta {
-          color: $primary;
-          background-color: $primary-light;
-          border-radius: 4px;
-          padding: 15px 45px;
-          font-size: 15px;
+        .property__list-card-excerpt {
+          padding-top: 20px;
         }
       }
+    }
 
+    .property__grid-card {
+      max-width: calc(50% - 1rem);
+
+      .property__grid-card-image {
+        max-height: 20vw;
+        height: 280px;
+
+        img {
+          position: absolute;
+          min-width: 100%;
+          min-height: 100%;
+          -o-object-fit: cover;
+          object-fit: cover;
+        }
+        a:before {
+          content: '';
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.403901) 100%);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+      }
+      .property__grid-card-price {
+        color: $white;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+      }
+      .property__grid-card-wrapper {
+        padding: 25px 40px 15px 40px;
+
+        .property__short-info {
+          border-bottom: 1px $separator solid;
+          padding-bottom: 15px;
+
+          .property__location {
+            color: $primary;
+            font-size: 14px;
+            line-height: 26px;
+            padding-left: 15px;
+            position: relative;
+          }
+          .property__location:before {
+            content: '';
+            background-image: $location-icon;
+            width: 10px;
+            height: 25px;
+            background-size: contain;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center;
+            left: 0;
+          }
+          .property__short-info-items {
+            span {
+              padding-left: 25px;
+              padding-right: 20px;
+              position: relative;
+              font-size: 14px;
+              line-height: 26px;
+              color: $dark-color;
+            }
+            span:before {
+              content: '';
+              width: 15px;
+              height: 25px;
+              background-size: contain;
+              position: absolute;
+              background-repeat: no-repeat;
+              background-position: center;
+              left: 0;
+            }
+            .property__bedrooms:before {
+              background-image: $bedroom-icon;
+            }
+            .property__bathrooms:before {
+              background-image: $bathroom-icon;
+            }
+            .property__capability:before {
+              background-image: $capability-icon;
+            }
+            .property__square:before {
+              background-image: $square-icon;
+            }
+          }
+        }
+        .property__grid-card-author {
+          border-bottom: 1px $separator solid;
+          padding: 15px 5px;
+          font-size: 14px;
+          line-height: 26px;
+
+          img {
+            margin-right: 15px;
+            border-radius: 50%;
+          }
+          .property__grid-card-author-name {
+            color: $dark-color;
+          }
+        }
+
+        .property__grid-card-cta {
+          padding: 15px 0 25px 0;
+
+          .property__details-cta-save {
+            color: $secondary;
+            svg {
+              margin-right: 5px;
+              margin-bottom: 3px;
+            }
+          }
+          .property__details-cta {
+            color: $primary;
+            background-color: $primary-light;
+            border-radius: 4px;
+            padding: 15px 45px;
+            font-size: 15px;
+          }
+        }
+
+      }
     }
   }
+  .properties__sidebar {
+    .properties__taxonomy-group {
+      padding: 20px 25px;
 
+      h3 {
+        margin-bottom: 30px;
+      }
 
+      .properties__taxonomy-list {
+        flex-flow: column wrap;
 
-}
-.properties__sidebar {
-  .properties__taxonomy-group {
-    padding: 20px 25px;
+        .properties__taxonomy-item {
+          padding-bottom: 10px;
+          font-size: 14px;
+          line-height: 26px;
 
-    h3 {
-      margin-bottom: 30px;
-    }
-
-    .properties__taxonomy-list {
-      flex-flow: column wrap;
-
-      .properties__taxonomy-item {
-        padding-bottom: 10px;
-        font-size: 14px;
-        line-height: 26px;
-
-        input {
-          margin-right: 10px;
+          input {
+            margin-right: 10px;
+          }
         }
+      }
+    }
+  }
+  .pagination {
+    justify-content: center;
+    .page-link {
+      line-height: 36px;
+      font-size: 16px;
+      width: 36px;
+      padding: 0;
+      text-align: center;
+      margin: 0 10px;
+      border-width: 0;
+      border-radius: 4px;
+      color: $secondary;
+    }
+    .page-link:hover {
+      background-color: $primary-light;
+    }
+    .page-item.active {
+      .page-link {
+        background-color: $primary;
+        color: $white;
       }
     }
   }

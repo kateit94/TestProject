@@ -11,7 +11,7 @@
         <div class="properties__taxonomy-list d-flex flex-row">
             <?php
             foreach( $amenities_terms as $term ) {
-                echo '<span class="properties__taxonomy-item w-50"><input type="checkbox" value="'. $term->term_id.'" name="'. $term->slug .'" id="'. $term->slug .'">'. $term->name .'</span>';
+                echo '<span class="properties__taxonomy-item w-50"><input type="checkbox" form="filter" onchange="jQuery(\'#filter\').submit()" value="'. $term->term_id.'" name="'. $term->slug .'" id="'. $term->slug .'">'. $term->name .'</span>';
             } ?>
         </div>
         <?php
@@ -29,7 +29,7 @@
         <div class="properties__taxonomy-list d-flex flex-row">
             <?php
             foreach( $extras_terms as $term ) {
-                echo '<span class="properties__taxonomy-item w-50"><input type="checkbox" value="'. $term->term_id.'" name="'. $term->slug .'" id="'. $term->slug .'">'. $term->name .'</span>';
+                echo '<span class="properties__taxonomy-item w-50"><input type="checkbox" form="filter" onchange="jQuery(\'#filter\').submit()" value="'. $term->term_id.'" name="'. $term->slug .'" id="'. $term->slug .'">'. $term->name .'</span>';
             } ?>
         </div>
         <?php
@@ -47,7 +47,7 @@
         <div class="properties__taxonomy-list d-flex flex-column">
             <?php
             foreach( $accessibility_terms as $term ) {
-                echo '<span class="properties__taxonomy-item"><input type="checkbox" value="'. $term->term_id.'" name="'. $term->slug .'" id="'. $term->slug .'">'. $term->name .'</span>';
+                echo '<span class="properties__taxonomy-item"><input type="checkbox" form="filter" onchange="jQuery(\'#filter\').submit()" value="'. $term->term_id.'" name="'. $term->slug .'" id="'. $term->slug .'">'. $term->name .'</span>';
             } ?>
         </div>
         <?php
@@ -65,7 +65,7 @@
         <div class="properties__taxonomy-list d-flex flex-column">
             <?php
             foreach( $bedroom_features_terms as $term ) {
-                echo '<span class="properties__taxonomy-item"><input type="checkbox" value="'. $term->term_id.'" name="'. $term->slug .'" id="'. $term->slug .'">'. $term->name .'</span>';
+                echo '<span class="properties__taxonomy-item"><input type="checkbox" form="filter" onchange="jQuery(\'#filter\').submit()" value="'. $term->term_id.'" name="'. $term->slug .'" id="'. $term->slug .'">'. $term->name .'</span>';
             } ?>
         </div>
         <?php
@@ -83,7 +83,7 @@
         <div class="properties__taxonomy-list d-flex flex-row">
             <?php
             foreach( $property_type_terms as $term ) {
-                echo '<span class="properties__taxonomy-item w-50"><input type="checkbox" value="'. $term->term_id.'" name="'. $term->slug .'" id="'. $term->slug .'">'. $term->name .'</span>';
+                echo '<span class="properties__taxonomy-item w-50"><input type="checkbox" form="filter" onchange="jQuery(\'#filter\').submit()" value="'. $term->term_id.'" name="'. $term->slug .'" id="'. $term->slug .'">'. $term->name .'</span>';
             } ?>
         </div>
         <?php

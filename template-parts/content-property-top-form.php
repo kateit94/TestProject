@@ -1,5 +1,5 @@
-<form class="properties__search-form">
-    <div class="row">
+<form class="properties__search-form" action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
+    <div class="row d-flex align-items-end">
         <div class="col-3 d-flex flex-column">
             <label for="where" class="text-uppercase"><?php echo __('where', 'hotel-property');?></label>
             <input type="search" name="where" placeholder="Anywhere" class="form-input"/>
@@ -23,7 +23,9 @@
             </select>
         </div>
         <div class="col-2 d-flex flex-column align-content-end">
-            <input type="submit" value="Search" />
+            <input type="submit" value="Search" / >
         </div>
     </div>
+    <input type="hidden" name="action" value="myfilter">
+    <input type="hidden" name="page" id="page" value="1">
 </form>

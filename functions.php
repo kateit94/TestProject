@@ -316,6 +316,10 @@ require get_template_directory() . '/inc/shortcodes-functions.php';
  * Custom gallery functions.
  */
 require get_template_directory() . '/inc/custom-gallery.php';
+/**
+ * Ajax filter functions.
+ */
+require get_template_directory() . '/inc/ajax-filter-functions.php';
 
 /**
  * Load Jetpack compatibility file.

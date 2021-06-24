@@ -20,30 +20,35 @@ jQuery('[data-fancybox="gallery"]').fancybox({
     }
 });
 
-//Calculate number of selected days in sidebar
-// jQuery(".property__single-sidebar input.hasDatepicker").change(function () {
-//     var start = new Date(getDate(jQuery('#datepicker_start').val()));
-//     var end = new Date(getDate(jQuery('#datepicker_end').val()));
-//
-//     diff = new Date(end - start),
-//         days = diff / 1000 / 60 / 60 / 24;
-//     if (days == NaN) {
-//         jQuery('#txtTotalDays').val(0);
-//     } else {
-//         alert(jQuery('#txtTotalDays').val(days));
-//     }
-// });
 
-// jQuery( document ).ready(function() {
-//     jQuery( '#datepicker_start .hasDatepicker' ).datepicker({
-//         onChange: function(val) {
-//             jQuery('#datepicker_end').datepicker( "option", "minDate", val );
-//         }
-//     });
-//
-//     jQuery( '#datepicker_end .hasDatepicker' ).datepicker({
-//         onChange: function(val) {
-//             jQuery('#datepicker_start').datepicker( "option", "maxDate", val );
-//         }
-//     });
-// });
+jQuery( document ).ready(function() {
+    //Ajax search form
+    jQuery('#filter').submit(function(){
+        var filter = jQuery('#filter');
+        jQuery.ajax({
+            url:filter.attr('action'),
+            data:filter.serialize(), // form data
+            type:filter.attr('method'), // POST
+            beforeSend:function(xhr){
+                filter.find('button').text('Processing...'); // changing the button label
+            },
+            success:function(data){
+                filter.find('button').text('Apply filter'); // changing the button label back
+                jQuery('#response').html(data); // insert data
+            }
+        });
+        return false;
+    });
+
+    //Pagination
+    jQuery( ".pagination .page-link" ).on( "click", function(e) {
+        e.preventDefault();
+        var url_string = this.href;
+        var url = new URL(url_string);
+        var page = url.searchParams.get("page");
+        jQuery("#filter #page").val(page);
+    });
+});
+
+
+

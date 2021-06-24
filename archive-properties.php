@@ -25,7 +25,7 @@ get_header();
         <div class="row">
             <div class="col-8">
                 <main id="primary" class="site-main">
-                    <div class="properties__grid-list d-flex flex-wrap">
+                    <div class="properties__grid-list d-flex flex-wrap" id="response">
 
                     <?php if ( have_posts() ) : ?>
 
@@ -39,11 +39,9 @@ get_header();
                              * If you want to override this in a child theme, then include a file
                              * called content-___.php (where ___ is the Post Type name) and that will be used instead.
                              */
-                            get_template_part( 'template-parts/content', 'property-list-card' );
+                            get_template_part( 'template-parts/content', 'property-grid-card' );
 
                         endwhile;
-
-                        the_posts_navigation();
 
                     else :
 
@@ -52,6 +50,7 @@ get_header();
                     endif;
                     ?>
                     </div>
+                    <?php hotel_property_pagination();?>
                 </main><!-- #main -->
             </div>
             <div class="col-4 shadow properties__sidebar">

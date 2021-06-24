@@ -17,12 +17,14 @@ var instance = new acf.Model({
         var val = $el.val();
         // do something
         //console.log(val);
-        if ($el.attr('data-key') == 'field_60ce2cdf73566') {
-            jQuery('#datepicker_end').datepicker( "option", "minDate", val );
+        if ($el.parent().parent().parent().eq(0).attr('data-key') == 'field_60ce2cdf73566') {
+            jQuery('#datepicker_end .hasDatepicker').datepicker( "option", "minDate", val );
         }
-        if ($el.attr('data-key') == 'field_60ce2d3073567') {
-            jQuery('#datepicker_start').datepicker( "option", "maxDate", val );
+        if ($el.parent().parent().parent().eq(0).attr('data-key') == 'field_60ce2d3073567') {
+            jQuery('#datepicker_start .hasDatepicker').datepicker( "option", "maxDate", val );
         }
+
+        //Here will be price calculate
     },
     onChangeText: function(e, $el){
         this.onChange(e, $el);
