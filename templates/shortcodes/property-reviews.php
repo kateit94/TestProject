@@ -7,7 +7,7 @@
         $property_id = get_the_ID();
         ?>
         <div class="property__reviews-items row">
-            <div class="col-6">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <?php if (get_field('reviews_cleanliness', $property_id)) {
                     $reviews_cleanliness = get_field('reviews_cleanliness', $property_id);?>
                     <div class="d-flex flex-row justify-content-between">
@@ -41,7 +41,7 @@
                     </div>
                 <?php } ?>
             </div>
-            <div class="col-6">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <?php if (get_field('reviews_accuracy', $property_id)) {
                     $reviews_accuracy = get_field('reviews_accuracy', $property_id);?>
                     <div class="d-flex flex-row justify-content-between">

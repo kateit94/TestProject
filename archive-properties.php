@@ -8,6 +8,7 @@
  */
 
 get_header();
+global $wp_query;
 ?>
     <div class="w-100 properties__heading-form-section">
         <div class="container">
@@ -22,8 +23,8 @@ get_header();
             <h1><?php echo __ ('300+ Places to Stay', 'hotel-property');?></h1>
             <?php get_template_part( 'template-parts/content', 'property-top-bar' ); ?>
         </div>
-        <div class="row">
-            <div class="col-8">
+        <div class="row mb-4">
+            <div class="col-12 col-md-12 col-lg-8">
                 <main id="primary" class="site-main">
                     <div class="properties__grid-list d-flex flex-wrap" id="response">
 
@@ -49,11 +50,12 @@ get_header();
 
                     endif;
                     ?>
+                    <?php hotel_property_pagination($wp_query);?>
                     </div>
-                    <?php hotel_property_pagination();?>
+
                 </main><!-- #main -->
             </div>
-            <div class="col-4 shadow properties__sidebar">
+            <div class="col-12 col-md-12 col-lg-4 shadow properties__sidebar">
                 <?php get_template_part( 'template-parts/content', 'property-sidebar' ); ?>
             </div>
         </div>

@@ -12,7 +12,7 @@ $main_image = get_the_post_thumbnail($property_id, 'full', array('class' => 'pro
         <?php if (get_field('price', $property_id)) {
             $property_price = get_field('price', $property_id);?>
             <div class="property__list-card-price position-absolute">
-                <span class="property__sidebar-price"><?php echo $property_price?></span><span><?php echo ' / '. __('Night', 'hotel-property')?></span>
+                <span class="property__sidebar-price"><?php echo '$ '. $property_price?></span><span><?php echo ' / '. __('Night', 'hotel-property')?></span>
             </div>
 
         <?php } ?>

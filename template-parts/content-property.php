@@ -71,7 +71,7 @@
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <div class="row">
-            <div class="col-8">
+            <div class="col-sm-12 col-md-12 col-lg-8">
                 <?php
                     the_title( '<h1 class="property__title">', '</h1>' );
                 ?>
@@ -84,7 +84,7 @@
             </div>
             <?php
             if ( is_active_sidebar( 'property-single-sidebar-widget' ) ) : ?>
-                <div class="col-4 property__single-sidebar">
+                <div class="col-sm-12 col-md-12 col-lg-4  property__single-sidebar">
                     <?php dynamic_sidebar( 'property-single-sidebar-widget' ); ?>
                 </div>
             <?php endif; ?>

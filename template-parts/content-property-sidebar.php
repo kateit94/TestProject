@@ -11,7 +11,7 @@
         <div class="properties__taxonomy-list d-flex flex-row">
             <?php
             foreach( $amenities_terms as $term ) {
-                echo '<span class="properties__taxonomy-item w-50"><input type="checkbox" form="filter" onchange="jQuery(\'#filter\').submit()" value="'. $term->term_id.'" name="'. $term->slug .'" id="'. $term->slug .'">'. $term->name .'</span>';
+                echo '<span class="properties__taxonomy-item w-50"><input type="checkbox" form="filter" onchange="jQuery(\'#filter\').submit()" value="'. $term->term_id.'" name="amenity[]" id="'. $term->slug .'">'. $term->name .'</span>';
             } ?>
         </div>
         <?php
@@ -29,7 +29,7 @@
         <div class="properties__taxonomy-list d-flex flex-row">
             <?php
             foreach( $extras_terms as $term ) {
-                echo '<span class="properties__taxonomy-item w-50"><input type="checkbox" form="filter" onchange="jQuery(\'#filter\').submit()" value="'. $term->term_id.'" name="'. $term->slug .'" id="'. $term->slug .'">'. $term->name .'</span>';
+                echo '<span class="properties__taxonomy-item w-50"><input type="checkbox" form="filter" onchange="jQuery(\'#filter\').submit()" value="'. $term->term_id.'" name="extras[]" id="'. $term->slug .'">'. $term->name .'</span>';
             } ?>
         </div>
         <?php
@@ -47,7 +47,7 @@
         <div class="properties__taxonomy-list d-flex flex-column">
             <?php
             foreach( $accessibility_terms as $term ) {
-                echo '<span class="properties__taxonomy-item"><input type="checkbox" form="filter" onchange="jQuery(\'#filter\').submit()" value="'. $term->term_id.'" name="'. $term->slug .'" id="'. $term->slug .'">'. $term->name .'</span>';
+                echo '<span class="properties__taxonomy-item"><input type="checkbox" form="filter" onchange="jQuery(\'#filter\').submit()" value="'. $term->term_id.'" name="accessibility[]" id="'. $term->slug .'">'. $term->name .'</span>';
             } ?>
         </div>
         <?php
@@ -65,14 +65,14 @@
         <div class="properties__taxonomy-list d-flex flex-column">
             <?php
             foreach( $bedroom_features_terms as $term ) {
-                echo '<span class="properties__taxonomy-item"><input type="checkbox" form="filter" onchange="jQuery(\'#filter\').submit()" value="'. $term->term_id.'" name="'. $term->slug .'" id="'. $term->slug .'">'. $term->name .'</span>';
+                echo '<span class="properties__taxonomy-item"><input type="checkbox" form="filter" onchange="jQuery(\'#filter\').submit()" value="'. $term->term_id.'" name="bedroom_features[]" id="'. $term->slug .'">'. $term->name .'</span>';
             } ?>
         </div>
         <?php
     }
     ?>
 </div>
-<div class="properties__taxonomy-group border-bottom">
+<div class="properties__taxonomy-group">
     <?php
     $property_type = 'property_type';
     $property_type_terms = get_terms( $property_type, [
@@ -83,7 +83,7 @@
         <div class="properties__taxonomy-list d-flex flex-row">
             <?php
             foreach( $property_type_terms as $term ) {
-                echo '<span class="properties__taxonomy-item w-50"><input type="checkbox" form="filter" onchange="jQuery(\'#filter\').submit()" value="'. $term->term_id.'" name="'. $term->slug .'" id="'. $term->slug .'">'. $term->name .'</span>';
+                echo '<span class="properties__taxonomy-item w-50"><input type="checkbox" form="filter" onchange="jQuery(\'#filter\').submit()" value="'. $term->term_id.'" name="property_type[]" id="'. $term->slug .'">'. $term->name .'</span>';
             } ?>
         </div>
         <?php

@@ -8,6 +8,11 @@
     .property__gallery-left {
       max-height: 30vw;
       min-height: 30vw;
+
+      @media screen and (max-width: 767px){
+        max-height: 50vw;
+        min-height: 50vw;
+      }
     }
     .property-main-image {
       position: absolute;
@@ -17,6 +22,10 @@
     }
     .property__gallery-right {
       max-height: 30vw;
+
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
 
       .flex-container {
         height: 100%;
@@ -157,6 +166,9 @@
       .property__amenities-wrapper {
         column-count: 4;
         column-gap: 30px;
+        @media screen and (max-width: 767px){
+          column-count: 2;
+        }
 
         span {
           font-size: 14px;
@@ -189,6 +201,16 @@
 
         .d-flex {
           margin-bottom: 10px;
+
+          @media screen and (max-width: 767px){
+            flex-wrap: wrap;
+            height: auto !important;
+          }
+        }
+        .property__reviews-name {
+          @media screen and (max-width: 767px){
+            width: 100%;
+          }
         }
         .d-flex,
         .property__reviews-name,
@@ -201,6 +223,9 @@
           background-color: $progress-bar-bg;
           border-radius: 2.5px;
 
+          @media screen and (min-width: 1200px) and (max-width:1400px ){
+            min-width: 130px;
+          }
           .progress-bar {
             background-color: $primary;
             border-radius: 2.5px;
@@ -208,6 +233,10 @@
         }
         .property__reviews-value {
           width: 40px;
+
+          @media screen and (max-width: 767px){
+            margin-bottom: 10px;
+          }
         }
       }
       .property__reviews-text-wrapper {
@@ -293,6 +322,54 @@
     .acf-form {
       padding: 20px 0;
 
+      .acf-field.subtotal, .acf-field.service-fee, .acf-field.total {
+        min-height: 45px;
+        padding: 0;
+
+        .acf-input-wrap {
+          pointer-events: none;
+          display: none;
+        }
+        .af-label.acf-label {
+          display: none;
+        }
+      }
+      .acf-field.service-fee, .acf-field.total {
+        .acf-input {
+          border-bottom: 1px $separator solid;
+        }
+      }
+      .acf-field.total {
+        label, span {
+          color: $dark-color;
+        }
+      }
+      .acf-input-prepend, .acf-input-append {
+        background-color: transparent;
+        border-width: 0;
+        color: $secondary;
+        height: 45px;
+        padding: 0 10px;
+
+        span {
+          font-size: 14px;
+          line-height: 45px;
+          position: relative;
+        }
+        .service-fee-label:after {
+          content: '';
+          background-image: url(/wp-content/uploads/2021/06/service-fee.svg);
+          width: 16px;
+          height: 16px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -25px;
+        }
+      }
       .acf-required {
         color: $dark-color;
       }
@@ -332,6 +409,151 @@
     .textwidget {
       a {
         color: $secondary;
+      }
+    }
+  }
+  .property__single-bottom {
+    .property__grid-card {
+      max-width: calc((100% / 3) - 3rem);
+
+      @media screen and (max-width: 1024px) {
+        max-width: 100%;
+      }
+
+      .property__grid-card-image {
+        max-height: 20vw;
+        height: 280px;
+
+        @media screen and (max-width: 1024px) {
+          max-height: 45vw;
+          height: 45vw;
+        }
+
+        img {
+          position: absolute;
+          min-width: 100%;
+          min-height: 100%;
+          -o-object-fit: cover;
+          object-fit: cover;
+        }
+        a:before {
+          content: '';
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.403901) 100%);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+      }
+      .property__grid-card-price {
+        color: $white;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+      }
+      .property__grid-card-wrapper {
+        padding: 25px 40px 15px 40px;
+
+        @media screen and (max-width: 991.98px) {
+          padding: 25px 15px 15px 15px;
+        }
+
+        .property__short-info {
+          border-bottom: 1px $separator solid;
+          padding-bottom: 15px;
+
+          .property__location {
+            color: $primary;
+            font-size: 14px;
+            line-height: 26px;
+            padding-left: 15px;
+            position: relative;
+          }
+          .property__location:before {
+            content: '';
+            background-image: $location-icon;
+            width: 10px;
+            height: 25px;
+            background-size: contain;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center;
+            left: 0;
+          }
+          .property__short-info-items {
+            span {
+              padding-left: 25px;
+              padding-right: 20px;
+              position: relative;
+              font-size: 14px;
+              line-height: 26px;
+              color: $dark-color;
+
+              @media screen and (max-width: 991.98px){
+                padding-right: 10px;
+              }
+            }
+            span:before {
+              content: '';
+              width: 15px;
+              height: 25px;
+              background-size: contain;
+              position: absolute;
+              background-repeat: no-repeat;
+              background-position: center;
+              left: 0;
+            }
+            .property__bedrooms:before {
+              background-image: $bedroom-icon;
+            }
+            .property__bathrooms:before {
+              background-image: $bathroom-icon;
+            }
+            .property__capability:before {
+              background-image: $capability-icon;
+            }
+            .property__square:before {
+              background-image: $square-icon;
+            }
+          }
+        }
+        .property__grid-card-author {
+          border-bottom: 1px $separator solid;
+          padding: 15px 5px;
+          font-size: 14px;
+          line-height: 26px;
+
+          img {
+            margin-right: 15px;
+            border-radius: 50%;
+          }
+          .property__grid-card-author-name {
+            color: $dark-color;
+          }
+        }
+
+        .property__grid-card-cta {
+          padding: 15px 0 25px 0;
+
+          .property__details-cta-save {
+            color: $secondary;
+            svg {
+              margin-right: 5px;
+              margin-bottom: 3px;
+            }
+          }
+          .property__details-cta {
+            color: $primary;
+            background-color: $primary-light;
+            border-radius: 4px;
+            padding: 15px 45px;
+            font-size: 15px;
+          }
+        }
+
       }
     }
   }

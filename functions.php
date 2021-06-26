@@ -245,11 +245,12 @@ function hotel_property_scripts() {
     wp_enqueue_script( 'bootstrap-js', get_stylesheet_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array('jquery'), '1', true );
     //Fancybox 3 JS
     wp_enqueue_script ('fancybox-script', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', array(), '3.5.7', true);
+    //Moment JS
+    wp_enqueue_script('moment_script',get_template_directory_uri() . '/assets/js/moment.js', array('jquery') );
+    wp_enqueue_script('moment_precise_range_script',get_template_directory_uri() . '/assets/js/moment-precise-range.js', array('jquery') );
 
 	wp_enqueue_script( 'hotel-property-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), _S_VERSION, true );
 	wp_enqueue_script( 'hotel-property-theme-js', get_template_directory_uri() . '/assets/js/theme.js', array('jquery'), _S_VERSION, true );
-
-
 
 
 

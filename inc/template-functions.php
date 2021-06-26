@@ -39,36 +39,28 @@ add_action( 'wp_head', 'hotel_property_pingback_header' );
 /**
  * Custom pagination
  */
-function hotel_property_pagination( $args = array(), $class = 'pagination' ) {
 
-    if ( $GLOBALS['wp_query']->max_num_pages <= 1 ) {
-        return;
-    }
-
-    $args = wp_parse_args(
-        $args,
-        array(
-            'mid_size'           => 2,
-            'prev_next'          => true,
-            'prev_text'          => __( '&laquo;', ' hotel-property' ),
-            'next_text'          => __( '&raquo;', 'hotel-property' ),
-            'screen_reader_text' => __( 'Posts navigation', 'hotel-property' ),
-            'type'               => 'array',
-            'current'            => max( 1, get_query_var( 'paged' ) ),
-            'format'             => '?page=%#%',
-        )
+function hotel_property_pagination($wp_query, $pages = 1) {
+    $args = array(
+        'prev_next'          => true,
+        'prev_text'          => __( '&laquo;', ' hotel-property' ),
+        'next_text'          => __( '&raquo;', 'hotel-property' ),
+        'base'    => '/?page=%#%',
+        'format'            => '?page=%#%',
+        'current' => max( 1, $pages ),
+        'total'   => $wp_query->max_num_pages,
+        'type'               => 'array',
     );
 
-    $links = paginate_links( $args );
-
+    $result = paginate_links( $args );
+    ob_start();
     ?>
-
     <nav aria-label="<?php echo $args['screen_reader_text']; ?>" class="pagination-wrapper w-100 text-center">
 
         <ul class="pagination">
 
             <?php
-            foreach ( $links as $key => $link ) {
+            foreach ( $result as $key => $link ) {
                 ?>
                 <li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : ''; ?>">
                     <?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
@@ -80,6 +72,31 @@ function hotel_property_pagination( $args = array(), $class = 'pagination' ) {
         </ul>
 
     </nav>
-
     <?php
+    echo ob_get_clean();
 }
+
+/**
+ * Properties - Posts per page
+ */
+
+add_action( 'pre_get_posts', 'properties_per_page_function' );
+function properties_per_page_function( $query ){
+
+    if( ! is_admin() && $query->is_main_query() && $query->is_post_type_archive('properties') ) {
+        $posts_per_page = $_POST['show-properties'] ?  $_POST['show-properties'] : 1;
+        $query->set( 'posts_per_page', $posts_per_page);
+    }
+}
+
+/**
+ * Properties - date filter
+ */
+function acf_posts_where( $where ) {
+
+    $where = str_replace( "meta_key = 'availability_dates_$", "meta_key LIKE 'availability_dates_%", $where );
+
+    return $where;
+
+}
+add_filter( 'posts_where', 'acf_posts_where' );

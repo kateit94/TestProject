@@ -19,6 +19,11 @@
           border: 1px $search-form-border solid;
           outline: none;
           height: 57px;
+          width: 100%;
+
+          @media screen and (max-width: 991.98px){
+            margin-bottom: 15px;
+          }
         }
         input[type="submit"] {
           background-color: $primary;
@@ -27,6 +32,10 @@
           line-height: 20px;
           height: 57px;
           border-width: 0;
+
+          @media screen and (max-width: 991.98px){
+            margin-bottom: 15px;
+          }
         }
         ::placeholder {
           color: $search-form-placeholder;
@@ -42,6 +51,12 @@
     margin-bottom: 40px;
 
     .properties__top-bar {
+      .d-flex.mb-2 {
+        @media screen and (max-width: 767px) {
+          width: 100%;
+          justify-content: space-between;
+        }
+      }
       select {
         color: $secondary;
         background-color: $select-bg;
@@ -55,14 +70,20 @@
         font-size: 14px;
       }
       .properties-grid-list-view {
-        a {
+        input[type=radio] {
+          display: none;
+        }
+        label {
+          cursor: pointer;
+          position: relative;
+          user-select: none;
           width: 32px;
           background-color: $select-bg;
             svg {
               fill: $secondary;
             }
         }
-        a.active {
+        input[type=radio]:checked + label {
           background-color: $primary;
           svg {
             fill: $white;
@@ -177,6 +198,10 @@
       .property__grid-card-image {
         max-height: 20vw;
         height: 280px;
+        @media screen and (max-width: 767px) {
+          max-height: 35vw;
+          height: 35vw;
+        }
 
         img {
           position: absolute;
@@ -205,6 +230,10 @@
       }
       .property__grid-card-wrapper {
         padding: 25px 40px 15px 40px;
+
+        @media screen and (max-width: 991.98px) {
+          padding: 25px 15px 15px 15px;
+        }
 
         .property__short-info {
           border-bottom: 1px $separator solid;
@@ -236,6 +265,10 @@
               font-size: 14px;
               line-height: 26px;
               color: $dark-color;
+
+              @media screen and (max-width: 991.98px){
+                padding-right: 10px;
+              }
             }
             span:before {
               content: '';
@@ -311,6 +344,7 @@
 
         .properties__taxonomy-item {
           padding-bottom: 10px;
+          padding-right: 5px;
           font-size: 14px;
           line-height: 26px;
 
@@ -320,6 +354,7 @@
         }
       }
     }
+
   }
   .pagination {
     justify-content: center;
@@ -333,6 +368,10 @@
       border-width: 0;
       border-radius: 4px;
       color: $secondary;
+      outline: none;
+    }
+    .page-link:focus {
+      box-shadow: none;
     }
     .page-link:hover {
       background-color: $primary-light;
@@ -341,6 +380,7 @@
       .page-link {
         background-color: $primary;
         color: $white;
+        pointer-events: none;
       }
     }
   }

@@ -34,7 +34,7 @@
                     ?>
                 </div><!-- .site-branding -->
 
-                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'hotel-property' ); ?></button>
+                <button class="menu-toggle ms-auto" aria-controls="primary-menu" aria-expanded="false"><span></span><span></span><span></span><span></span></button>
                 <?php
                 wp_nav_menu(
                     array(

@@ -4,7 +4,9 @@
     ?>
     <?php if (get_field('price', $property_id)) {
     $property_price = get_field('price', $property_id);?>
-        <span class="property__sidebar-price"><?php echo $property_price?></span><span><?php echo ' / '. __('Night', 'hotel-property')?></span>
+        <span class="property__sidebar-price"><?php echo '$'. $property_price?></span><span><?php echo ' / '. __('Night', 'hotel-property')?></span>
+        <input type="hidden" id="property-price" value="<?php echo $property_price?>">
+        <input type="hidden" id="service-fee" value="40">
 
     <?php } ?>
 
